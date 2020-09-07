@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXING BAG</title>
+</head>
+<body>
+    <div id="app">
+        <div id="bag" :class="{ burst: ended }">
+
+        </div>
+        <div id="bag-health">
+            <div :style="{ width: health + '%'}"></div>
+        </div>
+        <div id="control">
+            <button @click="punch" v-show="!ended">Punch</button>
+            <button @click="restart">Restart</button>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
